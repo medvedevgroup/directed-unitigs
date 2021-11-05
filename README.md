@@ -1,33 +1,39 @@
-Note : This is a modified version of bcalm in https://github.com/Malfoy/BCALM
+
 
 Modified-bcalm for directed unitigs
 =====
 
-Pre-requisites
-=====
-Need [Jellyfish](https://github.com/gmarcais/Jellyfish) installed. 
+This tool computes directed and double directed unitigs from a FASTA/FASTQ file.
 
-Installation
+
+
+Note : This uses a modified version of bcalm in [https://github.com/Malfoy/BCALM](https://github.com/Malfoy/BCALM)
+
+## Pre-requisites
+=====
+Require [Jellyfish](https://github.com/gmarcais/Jellyfish) to be installed. 
+
+## Installation
 =====
 `make`
 
 
-Use
+## Usage
 =====
 
 Usage: `./dd_unitigs.sh <fasta> <k>`
 
 ### To compute double directed unitigs:
 
-`./dd_unitigs.sh example/ref.fa 31'
-Output: File named uni_directed.fa containing double directed unitigs.
+`./dd_unitigs.sh example/ref.fa 31`   
+Output: File named uni_dd.fa containing double directed unitigs.
 
 ### To compute basic directed unitigs:
 
-`./directed_unitigs.sh example/ref.fa 31'
+`./directed_unitigs.sh example/ref.fa 31`   
 Output: File named uni_directed.fa containing basic directed unitigs.
 
-License
+## License
 =======
 
 BCALM's license is BSD with Attribution. In informal words, any use is permitted as long as it acknowledges us. For example with a citation to:

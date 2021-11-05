@@ -16,7 +16,7 @@ do
     cat mer_counts_dumps.fa | cut -f 1 -d" " |  awk '{print $0" 1"}'  > dbg_fwd.txt
     echo "$(cat dbg_fwd.txt | wc -l)" > n_mer$K
 
-    malfoybcalm  dbg_fwd.txt dbg$K.txt 50
+    $BASEDIR/dbcalm  dbg_fwd.txt dbg$K.txt 50
 
     cat dbg$K.txt | tr a A | tr c C | tr g G | tr t T | tr -d \; > unid$K.sset
     
